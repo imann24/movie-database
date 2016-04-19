@@ -1,0 +1,35 @@
+<style>
+  td, th, tr {
+     border: 1px solid black;
+     padding: 0.25em;
+     text-align: center;
+  }
+
+</style>
+
+<h1>Movies</h1>
+<%= link_to 'Add new Movie', 'movies/new' %>
+<br><br>
+<%= link_to 'Back', '/' %>
+<br><br>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Rating</th>
+    <th>Genre</th>
+  </tr>
+ 
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.rating %></td>
+      <td><%= Genre.find(movie.genre).name %></td>
+      <td><%= link_to 'Show', movie_path(movie) %></td>
+      <td><%= link_to 'Edit Movie', edit_movie_path(movie) %></td>
+      <td><%= link_to 'Edit Credits', movie_path(movie) + '/edit_credits' %>
+      <td><%= link_to 'Delete', movie_path(movie),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

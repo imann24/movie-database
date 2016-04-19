@@ -1,0 +1,550 @@
+
+---
+actor_to_movies:
+  columns:
+  - id
+  - movie_id
+  - actor_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 2
+    - 3
+    - '2015-04-09 02:29:28.465177'
+    - '2015-04-09 02:29:28.465177'
+  - - 2
+    - 3
+    - 15
+    - '2015-04-09 02:43:23.291273'
+    - '2015-04-09 02:43:23.291273'
+  - - 3
+    - 3
+    - 9
+    - '2015-04-09 02:43:27.499029'
+    - '2015-04-09 02:43:27.499029'
+  - - 4
+    - 4
+    - 6
+    - '2015-04-09 02:44:04.131455'
+    - '2015-04-09 02:44:04.131455'
+  - - 5
+    - 4
+    - 7
+    - '2015-04-09 02:44:07.605640'
+    - '2015-04-09 02:44:07.605640'
+  - - 6
+    - 5
+    - 11
+    - '2015-04-09 02:45:09.936262'
+    - '2015-04-09 02:45:09.936262'
+  - - 7
+    - 5
+    - 10
+    - '2015-04-09 02:45:13.204904'
+    - '2015-04-09 02:45:13.204904'
+  - - 8
+    - 6
+    - 14
+    - '2015-04-09 02:45:48.292263'
+    - '2015-04-09 02:45:48.292263'
+  - - 9
+    - 6
+    - 12
+    - '2015-04-09 02:45:53.226222'
+    - '2015-04-09 02:45:53.226222'
+  - - 10
+    - 6
+    - 13
+    - '2015-04-09 02:46:14.779534'
+    - '2015-04-09 02:46:14.779534'
+  - - 11
+    - 7
+    - 4
+    - '2015-04-09 02:46:48.875067'
+    - '2015-04-09 02:46:48.875067'
+  - - 12
+    - 7
+    - 5
+    - '2015-04-09 02:46:51.862492'
+    - '2015-04-09 02:46:51.862492'
+
+---
+actors:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Nicholas Cage
+    - '2015-04-09 01:38:51.422209'
+    - '2015-04-09 01:38:51.422209'
+  - - 2
+    - Tom Cruise
+    - '2015-04-09 01:38:51.425706'
+    - '2015-04-09 01:38:51.425706'
+  - - 3
+    - Emma Stone
+    - '2015-04-09 01:38:51.428214'
+    - '2015-04-09 01:38:51.428214'
+  - - 4
+    - Michael Cera
+    - '2015-04-09 02:35:14.046099'
+    - '2015-04-09 02:35:14.046099'
+  - - 5
+    - Mary Elizabeth Winstead
+    - '2015-04-09 02:35:27.256535'
+    - '2015-04-09 02:35:27.256535'
+  - - 6
+    - Jason Segel
+    - '2015-04-09 02:35:40.431104'
+    - '2015-04-09 02:35:40.431104'
+  - - 7
+    - Kristen Bell
+    - '2015-04-09 02:35:48.281935'
+    - '2015-04-09 02:35:48.281935'
+  - - 8
+    - Amanda Bynes
+    - '2015-04-09 02:36:16.625202'
+    - '2015-04-09 02:36:16.625202'
+  - - 9
+    - Courtney Cox
+    - '2015-04-09 02:36:31.771840'
+    - '2015-04-09 02:36:31.771840'
+  - - 10
+    - Andy Sandberg
+    - '2015-04-09 02:36:41.384987'
+    - '2015-04-09 02:36:41.384987'
+  - - 11
+    - Rashida Jones
+    - '2015-04-09 02:36:48.745381'
+    - '2015-04-09 02:36:48.745381'
+  - - 12
+    - Ellar Coltrane
+    - '2015-04-09 02:37:10.034546'
+    - '2015-04-09 02:37:10.034546'
+  - - 13
+    - Ethan Hawke
+    - '2015-04-09 02:37:15.345964'
+    - '2015-04-09 02:37:15.345964'
+  - - 14
+    - Patricia Arquette
+    - '2015-04-09 02:37:22.404984'
+    - '2015-04-09 02:37:22.404984'
+  - - 15
+    - Jim Carrey
+    - '2015-04-09 02:43:07.776126'
+    - '2015-04-09 02:43:07.776126'
+
+---
+director_to_movies:
+  columns:
+  - id
+  - movie_id
+  - director_id
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - 2
+    - 10
+    - '2015-04-09 02:42:11.314226'
+    - '2015-04-09 02:42:11.314226'
+  - - 3
+    - 3
+    - 8
+    - '2015-04-09 02:43:31.609370'
+    - '2015-04-09 02:43:31.609370'
+  - - 4
+    - 4
+    - 9
+    - '2015-04-09 02:44:31.482883'
+    - '2015-04-09 02:44:31.482883'
+  - - 5
+    - 5
+    - 7
+    - '2015-04-09 02:45:18.766822'
+    - '2015-04-09 02:45:18.766822'
+  - - 6
+    - 6
+    - 6
+    - '2015-04-09 02:46:20.029435'
+    - '2015-04-09 02:46:20.029435'
+  - - 7
+    - 7
+    - 5
+    - '2015-04-09 02:46:56.541543'
+    - '2015-04-09 02:46:56.541543'
+
+---
+directors:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Quentin Tarantino
+    - '2015-04-09 01:37:08.899867'
+    - '2015-04-09 01:37:08.899867'
+  - - 2
+    - Stephen Speilberg
+    - '2015-04-09 01:37:08.904121'
+    - '2015-04-09 01:37:08.904121'
+  - - 3
+    - George Lucas
+    - '2015-04-09 01:37:08.906840'
+    - '2015-04-09 01:37:08.906840'
+  - - 4
+    - JJ Abrams
+    - '2015-04-09 01:37:08.909684'
+    - '2015-04-09 01:37:08.909684'
+  - - 5
+    - Edgar Wright
+    - '2015-04-09 02:37:40.410347'
+    - '2015-04-09 02:37:40.410347'
+  - - 6
+    - Richard Linklater
+    - '2015-04-09 02:37:49.012820'
+    - '2015-04-09 02:37:49.012820'
+  - - 7
+    - Lee Toland
+    - '2015-04-09 02:38:15.322288'
+    - '2015-04-09 02:38:15.322288'
+  - - 8
+    - Tom Shadyac
+    - '2015-04-09 02:38:42.901793'
+    - '2015-04-09 02:38:42.901793'
+  - - 9
+    - Nicholas Stoller
+    - '2015-04-09 02:39:14.586074'
+    - '2015-04-09 02:39:14.586074'
+  - - 10
+    - Will Gluck
+    - '2015-04-09 02:41:58.638005'
+    - '2015-04-09 02:41:58.638005'
+
+---
+genres:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 19
+    - Action & Adventure
+    - '2015-04-09 01:38:51.394635'
+    - '2015-04-09 01:38:51.394635'
+  - - 20
+    - Kids & Family
+    - '2015-04-09 01:38:51.397724'
+    - '2015-04-09 01:38:51.397724'
+  - - 21
+    - Drama
+    - '2015-04-09 01:38:51.399680'
+    - '2015-04-09 01:38:51.399680'
+  - - 22
+    - Sci-Fi & Fantasy
+    - '2015-04-09 01:38:51.401386'
+    - '2015-04-09 01:38:51.401386'
+  - - 23
+    - Comedy
+    - '2015-04-09 01:38:51.403126'
+    - '2015-04-09 01:38:51.403126'
+  - - 24
+    - Western
+    - '2015-04-09 01:38:51.405139'
+    - '2015-04-09 01:38:51.405139'
+  - - 25
+    - Thriller
+    - '2015-04-09 01:38:51.407099'
+    - '2015-04-09 01:38:51.407099'
+  - - 26
+    - Horror
+    - '2015-04-09 01:38:51.409074'
+    - '2015-04-09 01:38:51.409074'
+  - - 27
+    - Documentary
+    - '2015-04-09 01:38:51.411042'
+    - '2015-04-09 01:38:51.411042'
+
+---
+screenwriter_to_movies:
+  columns:
+  - id
+  - movie_id
+  - screenwriter_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 2
+    - 8
+    - '2015-04-09 02:29:35.648103'
+    - '2015-04-09 02:29:35.648103'
+  - - 2
+    - 3
+    - 1
+    - '2015-04-09 02:43:44.418166'
+    - '2015-04-09 02:43:44.418166'
+  - - 3
+    - 3
+    - 2
+    - '2015-04-09 02:43:49.956898'
+    - '2015-04-09 02:43:49.956898'
+  - - 4
+    - 4
+    - 10
+    - '2015-04-09 02:44:50.405033'
+    - '2015-04-09 02:44:50.405033'
+  - - 5
+    - 5
+    - 5
+    - '2015-04-09 02:45:24.409249'
+    - '2015-04-09 02:45:24.409249'
+  - - 6
+    - 6
+    - 3
+    - '2015-04-09 02:46:27.678087'
+    - '2015-04-09 02:46:27.678087'
+  - - 7
+    - 7
+    - 9
+    - '2015-04-09 02:47:07.463430'
+    - '2015-04-09 02:47:07.463430'
+
+---
+screenwriters:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Andy Wachowksi
+    - '2015-04-09 01:37:08.920898'
+    - '2015-04-09 01:37:08.920898'
+  - - 2
+    - Larry Wachowksi
+    - '2015-04-09 01:37:08.924084'
+    - '2015-04-09 01:37:08.924084'
+  - - 3
+    - Richard Linklater
+    - '2015-04-09 01:37:08.926563'
+    - '2015-04-09 01:37:08.926563'
+  - - 4
+    - Rian Johnson
+    - '2015-04-09 01:37:08.928962'
+    - '2015-04-09 01:37:08.928962'
+  - - 5
+    - Rashida Jones
+    - '2015-04-09 01:37:08.931235'
+    - '2015-04-09 01:37:08.931235'
+  - - 6
+    - Will McCormack
+    - '2015-04-09 01:37:08.933926'
+    - '2015-04-09 01:37:08.933926'
+  - - 7
+    - Henry Selick
+    - '2015-04-09 01:37:08.936390'
+    - '2015-04-09 01:37:08.936390'
+  - - 8
+    - Bert V. Royal
+    - '2015-04-09 01:37:08.938794'
+    - '2015-04-09 01:37:08.938794'
+  - - 9
+    - Michael Bacall
+    - '2015-04-09 02:40:15.148514'
+    - '2015-04-09 02:40:15.148514'
+  - - 10
+    - Jason Segel
+    - '2015-04-09 02:44:42.716263'
+    - '2015-04-09 02:44:42.716263'
+
+---
+studio_to_movies:
+  columns:
+  - id
+  - movie_id
+  - studio_id
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - 2
+    - 6
+    - '2015-04-09 02:42:42.767124'
+    - '2015-04-09 02:42:42.767124'
+  - - 3
+    - 3
+    - 7
+    - '2015-04-09 02:43:54.452240'
+    - '2015-04-09 02:43:54.452240'
+  - - 4
+    - 4
+    - 7
+    - '2015-04-09 02:44:56.867415'
+    - '2015-04-09 02:44:56.867415'
+  - - 5
+    - 5
+    - 5
+    - '2015-04-09 02:45:39.127628'
+    - '2015-04-09 02:45:39.127628'
+  - - 6
+    - 6
+    - 4
+    - '2015-04-09 02:46:34.648920'
+    - '2015-04-09 02:46:34.648920'
+  - - 7
+    - 7
+    - 7
+    - '2015-04-09 02:47:31.995385'
+    - '2015-04-09 02:47:31.995385'
+
+---
+studios:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 20th Century Fox
+    - '2015-04-09 01:37:08.949200'
+    - '2015-04-09 01:37:08.949200'
+  - - 2
+    - Pixar
+    - '2015-04-09 01:37:08.952286'
+    - '2015-04-09 01:37:08.952286'
+  - - 3
+    - Warner Bros
+    - '2015-04-09 01:37:08.954662'
+    - '2015-04-09 01:37:08.954662'
+  - - 4
+    - IFC
+    - '2015-04-09 02:40:48.145814'
+    - '2015-04-09 02:40:48.145814'
+  - - 5
+    - Envision Media Arts
+    - '2015-04-09 02:41:03.607119'
+    - '2015-04-09 02:41:03.607119'
+  - - 6
+    - Screen Gems
+    - '2015-04-09 02:41:13.936182'
+    - '2015-04-09 02:41:13.936182'
+  - - 7
+    - Universal Pictures
+    - '2015-04-09 02:41:37.139071'
+    - '2015-04-09 02:41:37.139071'
+
+---
+movies:
+  columns:
+  - id
+  - title
+  - rating
+  - length
+  - genre
+  - score
+  - synopsis
+  - created_at
+  - updated_at
+  - year
+  records: 
+  - - 2
+    - Easy A
+    - PG-13
+    - '1970-01-01 01:32:00.000000'
+    - '23'
+    - 6.9
+    - Prompted by her popular best friend to spill details of her boring weekend,
+      Olive (Emma Stone), a clean-cut teen, decides to spice things up by telling
+      a little lie about losing her virginity. When the high-school busybody (Amanda
+      Bynes) overhears the conversation and spreads it all over campus, Olive is suddenly
+      notorious but for the wrong reasons.
+    - '2015-04-09 01:56:12.956193'
+    - '2015-04-09 02:24:53.928369'
+    - '2010-04-01'
+  - - 3
+    - 'Ace Venture: Pet Detective'
+    - PG-13
+    - '1970-01-01 01:24:00.000000'
+    - '23'
+    - 7.9
+    - "Jim Carrey does goofy, physical comedy for an hour and half.\r\n"
+    - '2015-04-09 02:30:16.501709'
+    - '2015-04-09 02:30:16.501709'
+    - '1994-04-01'
+  - - 4
+    - Forgetting Sarah Marshall
+    - R
+    - '1970-01-01 01:57:00.000000'
+    - '19'
+    - 8.2
+    - From the guys that brought you The 40-Year-Old Virgin and Knocked Up, comes
+      “One of the funniest, damn movies I’ve ever seen!” (Richard Roeper, At the Movies
+      with Ebert & Roeper). Peter (Jason Segel) is a struggling musician who finds
+      his world turned upside down when his TV celebrity girlfriend, Sarah Marshall
+      (Kristen Bell), dumps him for a tragically hip rock star. It's the hysterically
+      funny look at how far one man will go to forget a girl – and all the fun he
+      finds along the way!
+    - '2015-04-09 02:32:18.925960'
+    - '2015-04-09 02:32:18.925960'
+    - '2008-04-01'
+  - - 5
+    - Celeste and Jesse Forever
+    - R
+    - '1970-01-01 01:32:00.000000'
+    - '19'
+    - 7.9
+    - Celeste (Rashida Jones) and Jesse (Andy Samberg) are high school sweethearts
+      who married young and are now at a crossroads at the age of thirty. While Celeste
+      is a success in business, Jesse is unemployed and adrift. Celeste thinks that
+      if they divorce now they could still remain friends. Jesse passively accepts
+      the decision even though he is still in love with her. As reality sets in, Celeste
+      slowly and painfully realizes she has been cavalier about their relationship,
+      but her timing with Jesse is less than fortuitous.
+    - '2015-04-09 02:33:05.375300'
+    - '2015-04-09 02:33:05.375300'
+    - '2012-04-01'
+  - - 6
+    - Boyhood
+    - R
+    - '1970-01-01 02:42:00.000000'
+    - '21'
+    - 8.8
+    - Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking
+      story of growing up as seen through the eyes of a child named Mason (a breakthrough
+      performance by Ellar Coltrane), who literally grows up on screen before our
+      eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer
+      Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of
+      childhood like no other film has before. Snapshots of adolescence from road
+      trips and family dinners to birthdays and graduations and all the moments in
+      between become transcendent, set to a soundtrack spanning the years from Coldplay's
+      Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule
+      of the recent past and an ode to growing up and parenting. It's impossible to
+      watch Mason and his family without thinking about our own journey.
+    - '2015-04-09 02:34:00.112011'
+    - '2015-04-09 02:34:00.112011'
+    - '2014-04-01'
+  - - 7
+    - Scott Pilgrim vs. The World
+    - PG-13
+    - '1970-01-01 01:52:00.000000'
+    - '19'
+    - 9.3
+    - Game on! Scott Pilgrim just met the girl of his dreams…literally. But in order
+      for them to date, he must defeat her seven evil exes -- a rogues' gallery --
+      including an infamous skateboarder, a vegan rock star and fearsome identical
+      twins! From the genre-smashing director of Hot Fuzz and Shaun of the Dead comes
+      “a true original” (Entertainment Weekly) powered up by wit, action and groundbreaking
+      visuals that you will want to watch again as soon as it’s over!
+    - '2015-04-09 02:35:03.701699'
+    - '2015-04-09 02:35:03.701699'
+    - '2010-04-01'

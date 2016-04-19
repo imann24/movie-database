@@ -1,0 +1,24 @@
+<p>
+	<b>Screenwriter Name:</b>
+	<%= @screenwriter.name %><%= link_to '(Back)', screenwriters_path %>
+</p>
+
+ <%= link_to 'Edit', edit_screenwriter_path(@screenwriter) %>
+<%= link_to 'Edit Credits', screenwriter_path(@screenwriter) + '/edit_credits' %>
+<%= link_to 'Delete', @screenwriter,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+<p>
+  <strong>Movies:</strong>
+ <table>
+  <% @screenwriter.movies.each do |movie| %>
+    <tr>
+      <td><%=  link_to Movie.find(movie).title, Movie.find(movie) %></td>
+      <td><%= Movie.find(movie).rating %></td>
+      <td><%= Movie.find(movie).year.strftime("%Y") %></td>
+    </tr>
+  <% end %>
+</table>
+  </p>
+  

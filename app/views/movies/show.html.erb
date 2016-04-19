@@ -1,0 +1,82 @@
+<p>
+  <strong>Title:</strong>
+    <%= @movie.title %><%= link_to '(Back)', movies_path %>
+</p>
+ <%= link_to 'Edit', edit_movie_path(@movie) %>
+<%= link_to 'Edit Credits', movie_path(@movie) + '/edit_credits' %>
+<%= link_to 'Delete', @movie,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+
+ <p> 
+ 	<strong>Year:</strong>
+ 	<%= @movie.year.strftime("%Y") %>
+<p>
+  <strong>Actors:</strong>
+ <table>
+  <% @movie.actors.each do |actor| %>
+    <tr>
+      <td><%= link_to actor.name, actor %></td>
+    </tr>
+  <% end %>
+</table>
+  </p>
+
+<p>
+  <strong>MPAA Rating:</strong>
+  <%= @movie.rating %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @movie.length.strftime("%H : %M")  %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= Genre.find(@movie.genre).name %>
+</p>
+
+<p>
+  <strong>Directors:</strong>
+ <table>
+  <% @movie.directors.each do |director| %>
+    <tr>
+      <td><%= link_to director.name, director %></td>
+    </tr>
+  <% end %>
+</table>
+</p>
+
+<p>
+  <strong>Screenwriters:</strong>
+ <table>
+  <% @movie.screenwriters.each do |screenwriter| %>
+    <tr>
+      <td><%= link_to screenwriter.name, screenwriter %></td>
+    </tr>
+  <% end %>
+</table>
+</p>
+
+<p>
+  <strong>Studios:</strong>
+ <table>
+  <% @movie.studios.each do |studio| %>
+    <tr>
+      <td><%= link_to studio.name, studio %></td>
+    </tr>
+  <% end %>
+</table>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @movie.score %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @movie.synopsis %>
+</p>

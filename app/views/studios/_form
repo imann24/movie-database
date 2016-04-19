@@ -1,0 +1,26 @@
+<%= form_for @studio do |f| %>
+
+<% if @studio.errors.any? %> 
+<div id "error explanation"> 
+	<h2>
+		<%= pluralize(@studio.errors.count, "error") %> 
+		prohibiited 
+		this article from being saved 
+	</h2>
+	<ul>
+		<% @studio.errors.full_messages.each do |msg| %> 
+			<li><%= msg %></li> 
+		<% end %> 
+	</ul>
+</div>
+<% end %> 
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

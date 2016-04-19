@@ -1,0 +1,25 @@
+<p>
+	<b>Studio Name:</b>
+	<%= @studio.name %><%= link_to '(Back)', studios_path %>
+</p>
+
+  <%= link_to 'Edit', edit_studio_path(@studio) %>
+  <%= link_to 'Edit Credits', studio_path(@studio) + '/edit_credits' %>
+  <%= link_to 'Delete', @studio,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  
+
+<p>
+  <strong>Movies:</strong>
+ <table>
+  <% @studio.movies.each do |movie| %>
+    <tr>
+      <td><%=  link_to Movie.find(movie).title, Movie.find(movie) %></td>
+      <td><%= Movie.find(movie).rating %></td>
+      <td><%= Movie.find(movie).year.strftime("%Y") %></td>
+    </tr>
+  <% end %>
+</table>
+  </p>
+

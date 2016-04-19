@@ -1,0 +1,2 @@
+class ScreenwriterToMoviesController < ApplicationController
+end

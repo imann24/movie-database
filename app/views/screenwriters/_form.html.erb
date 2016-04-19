@@ -1,0 +1,26 @@
+<%= form_for @screenwriter do |f| %>
+
+<% if @screenwriter.errors.any? %> 
+<div id "error explanation"> 
+	<h2>
+		<%= pluralize(@screenwriter.errors.count, "error") %> 
+		prohibiited 
+		this article from being saved 
+	</h2>
+	<ul>
+		<% @screenwriter.errors.full_messages.each do |msg| %> 
+			<li><%= msg %></li> 
+		<% end %> 
+	</ul>
+</div>
+<% end %> 
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

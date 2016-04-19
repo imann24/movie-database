@@ -1,0 +1,2 @@
+class StudioToMoviesController < ApplicationController
+end

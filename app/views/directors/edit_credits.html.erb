@@ -1,0 +1,55 @@
+<style> 
+    td, th, tr {
+     border: 1px solid black;
+     padding: 0.25em;
+  }
+
+   td {
+      padding-right: 2em;
+   }
+</style>
+
+<h1> Edit
+   <%= @director.name %>'s Movies
+</h1>
+
+<%= link_to 'Back', '../' %>
+
+
+<table>
+   <tr>
+         <th><h1> Movies </h1></th>
+   </tr>
+
+   <tr>
+      <td>
+         <ul>
+            <% @director.movies.each do |movie| %>
+               <li><%= link_to Movie.find(movie).title, Movie.find(movie) %></li>
+            <% end %>
+         </ul>
+      </td>
+   </tr>
+
+   <tr>
+      <td>
+         <h3>Add a Movie:</h3>
+         <%= form_for :director_to_movie, url: director_path(@director) + "/add_movie" do |f| %>
+            <%= collection_select(:director_to_movie, :movie_id, @movies - @director.movies, :id, :title, prompt: true) %>
+            <P><%= f.submit("Add Movie") %>
+         <% end %>
+      </td>
+   </tr>
+
+   <tr>
+      <td>
+         <h3>Remove a Movie:</h3>
+         <%= form_for :director_to_movie, url: director_path(@director) + "/remove_movie" do |j| %>
+            <%= collection_select(:director_to_movie, :movie_id, @director.movies, :id, :title, prompt: true) %>
+            <P><%= j.submit("Remove Movie") %>
+         <% end %>
+      </td>
+   </tr>
+</table>
+
+

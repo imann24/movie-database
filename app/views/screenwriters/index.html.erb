@@ -1,0 +1,22 @@
+<h1>Screenwriters</h1>
+ <%= link_to "Add New Screenwriter", '/screenwriters/new' %>
+<br><br>
+<%= link_to 'Back', '/' %>
+<br><br>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+ 
+  <% @screenwriters.each do |screenwriter| %>
+    <tr>
+      <td><%= screenwriter.name %></td>
+      <td><%= link_to 'Show', screenwriter_path(screenwriter) %></td>
+      <td><%= link_to 'Edit', edit_screenwriter_path(screenwriter) %></td>
+      <td><%= link_to 'Edit Credits', screenwriter_path(screenwriter) + '/edit_credits' %>
+       <td><%= link_to 'Delete', screenwriter_path(screenwriter),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

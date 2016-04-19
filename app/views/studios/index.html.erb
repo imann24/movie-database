@@ -1,0 +1,22 @@
+<h1>Studios</h1>
+ <%= link_to "Add New Studio", '/studios/new' %>
+<br><br>
+<%= link_to 'Back', '/' %>
+<br><br>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+ 
+  <% @studios.each do |studio| %>
+    <tr>
+      <td><%= studio.name %></td>
+      <td><%= link_to 'Show', studio_path(studio) %></td>
+      <td><%= link_to 'Edit', edit_studio_path(studio) %></td>
+      <td><%= link_to 'Edit Credits', studio_path(studio) + '/edit_credits' %>
+       <td><%= link_to 'Delete', studio_path(studio),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,26 @@
+<p>
+	<b>Name:</b>
+	<%= @actor.name %><%= link_to '(Back)', actors_path %>
+</p>
+
+<%= link_to 'Edit', edit_actor_path(@actor) %>
+<%= link_to 'Edit Credits', actor_path(@actor) + '/edit_credits' %>
+<%= link_to 'Delete', @actor,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+<p>
+  <strong>Movies:</strong>
+ <table>
+  <% @actor.movies.each do |movie| %>
+    <tr>
+      <td><%= link_to Movie.find(movie).title, Movie.find(movie) %></td>
+      <td><%= Movie.find(movie).rating %></td>
+      <td><%= Movie.find(movie).year.strftime("%Y") %></td>
+    </tr>
+  <% end %>
+</table>
+  </p>
+
+
+

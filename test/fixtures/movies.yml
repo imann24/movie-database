@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  rating: MyString
+  length: 2015-03-28 20:49:48
+  genre: MyString
+  score: 1.5
+  synopsis: MyText
+  year: 1
+
+two:
+  title: MyString
+  rating: MyString
+  length: 2015-03-28 20:49:48
+  genre: MyString
+  score: 1.5
+  synopsis: MyText
+  year: 1

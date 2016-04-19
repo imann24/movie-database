@@ -1,0 +1,131 @@
+<style> 
+    td, th, tr {
+     border: 1px solid black;
+     padding: 0.25em;
+     text-align: center;
+  }
+
+   td {
+      padding-right: 2em;
+   }
+</style>
+
+<h1>Edits Credits on the 
+   <%= @movie.title %>
+</h1>
+
+<%= link_to 'Back', '../' %>
+
+
+<table>
+   <tr>
+         <th><h1> Actors </h1></th>
+         <th><h1> Directors </h1></th>
+         <th><h1> Screenwriters </h1></th>
+         <th><h1> Studios </h1></th>
+   </tr>
+
+   <tr>
+      <td>
+         <ul>
+            <% @movie.actors.each do |actor| %>
+               <li><%= link_to Actor.find(actor).name, Actor.find(actor) %></li>
+            <% end %>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <% @movie.directors.each do |director| %>
+               <li><%= link_to Director.find(director).name, Director.find(director) %></li>
+            <% end %>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <% @movie.screenwriters.each do |screenwriter| %>
+               <li><%= link_to Screenwriter.find(screenwriter).name, Screenwriter.find(screenwriter) %></li>
+            <% end %>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <% @movie.studios.each do |studio| %>
+               <li><%= link_to Studio.find(studio).name, Studio.find(studio) %></li>
+            <% end %>
+         </ul>
+      </td>
+   </tr>
+
+   <tr>
+
+      <td>
+         <h3>Add an Actor:</h3>
+         <%= form_for :actor_to_movie, url: movie_path(@movie) + "/add_actor" do |f| %>
+            <%= collection_select(:actor_to_movie, :actor_id, @actors - @movie.actors, :id, :name, prompt: true) %>
+            <P><%= f.submit("Add Actor") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Add a Director:</h3>
+         <%= form_for :director_to_movie, url: movie_path(@movie) + "/add_director" do |g| %>
+            <%= collection_select(:director_to_movie, :director_id, @directors - @movie.directors, :id, :name, prompt: true) %>
+            <P><%= g.submit("Add Director") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Add a Screenwriter:</h3>
+         <%= form_for :screenwriter_to_movie, url: movie_path(@movie) + "/add_screenwriter" do |h| %>
+            <%= collection_select(:screenwriter_to_movie, :screenwriter_id, @screenwriters - @movie.screenwriters, :id, :name, prompt: true) %>
+            <P><%= h.submit("Add Screenwriter") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Add a Studio:</h3>
+         <%= form_for :studio_to_movie, url: movie_path(@movie) + "/add_studio" do |i| %>
+            <%= collection_select(:studio_to_movie, :studio_id, @studios - @movie.studios, :id, :name, prompt: true) %>
+            <P><%= i.submit("Add Studio") %>
+         <% end %>
+      </td>
+   </tr>
+
+   <tr>
+
+      <td>
+         <h3>Remove an Actor:</h3>
+         <%= form_for :actor_to_movie, url: movie_path(@movie) + "/remove_actor" do |j| %>
+            <%= collection_select(:actor_to_movie, :actor_id, @movie.actors, :id, :name, prompt: true) %>
+            <P><%= j.submit("Remove Actor") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Remove a Director:</h3>
+         <%= form_for :director_to_movie, url: movie_path(@movie) + "/remove_director" do |k| %>
+            <%= collection_select(:director_to_movie, :director_id, @movie.directors, :id, :name, prompt: true) %>
+            <P><%= k.submit("Remove Director") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Remove a Screenwriter:</h3>
+         <%= form_for :screenwriter_to_movie, url: movie_path(@movie) + "/remove_screenwriter" do |l| %>
+            <%= collection_select(:screenwriter_to_movie, :screenwriter_id, @movie.screenwriters, :id, :name, prompt: true) %>
+            <P><%= l.submit("Remove Screenwriter") %>
+         <% end %>
+      </td>
+
+      <td>
+         <h3>Remove a Studio:</h3>
+         <%= form_for :studio_to_movie, url: movie_path(@movie) + "/remove_studio" do |m| %>
+            <%= collection_select(:studio_to_movie, :studio_id, @movie.studios, :id, :name, prompt: true) %>
+            <P><%= m.submit("Remove Studio") %>
+         <% end %>
+      </td>
+
+   </tr>
+</table>
+
+

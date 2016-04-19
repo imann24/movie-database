@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <h1 class = "title">iMANN Movie Database</h1>
+  <div class = "navbar">
+	<%= link_to 'Movies', movies_path %>
+	|
+	<%= link_to 'Actors', actors_path %>
+	|
+	<%= link_to 'Directors', directors_path %>
+	|
+	<%= link_to 'Screenwriters', screenwriters_path %>
+	|
+	<%= link_to 'Studios', studios_path %>
+	<hr>
+</div>
+</head>
+<body>
+<div class = "center"> 
+	<%= yield %>
+</div>
+</body>
+</html>
